@@ -1,0 +1,76 @@
+@import "../../style//mixins";
+.card-right {
+  position: absolute;
+  left: 40%;
+  top: 7%;
+  width: 60%;
+  height: 530px;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 1px 5px #a3a3a32f;
+  z-index: 10;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @include media(desktopL) {
+    position: relative;
+    width: 65%;
+    top: 0;
+    left: 0;
+    max-height: 620px;
+    border-radius: 5px;
+  }
+
+  @include media(desktop) {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  @include media(tablet) {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  @include media(phone) {
+    padding: 0.7rem;
+  }
+
+  @include media(phoneM) {
+    width: 97%;
+    max-width: 100%;
+    border-radius: 0;
+    margin: 1rem auto;
+
+    @include media(phoneS) {
+      width: 100%;
+      margin: 1.5rem 0;
+      padding: 0.3rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    position: absolute;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(136, 136, 136, 0.76);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(87, 87, 87, 0.623);
+  }
+}
+
+.notfoundtext {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0%;
+}

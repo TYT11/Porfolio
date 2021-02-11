@@ -1,0 +1,73 @@
+@import "../../style//mixins";
+.contact-container {
+  position: relative;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media(tabletS) {
+      margin: auto;
+      width: 100%;
+    }
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      box-shadow: 2px 3px 10px 3px #eee;
+      padding: 15px;
+      border-radius: 8px;
+      width: 32rem;
+      margin: 0 2%;
+
+      label {
+        padding: 5px 0px 5px 0px;
+      }
+
+      input,
+      textarea {
+        font-family: inherit;
+        color: rgb(80, 80, 80);
+        padding: 3px 5px;
+        width: 50%;
+        font-size: 15px;
+        border: none;
+        background-color: #eee;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      textarea,
+      input {
+        padding: 10px;
+      }
+
+      input:focus,
+      textarea:focus {
+        background-color: #d3e8eb;
+      }
+
+      input:last-child {
+        align-self: center;
+        width: 20%;
+      }
+
+      #content {
+        width: 100%;
+        min-height: 100px;
+        margin-bottom: 10px;
+      }
+
+      label:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+}

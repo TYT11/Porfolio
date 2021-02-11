@@ -1,0 +1,52 @@
+@mixin media($type) {
+  @if $type == phoneS {
+    @media (max-width: 300px) {
+      @content;
+    }
+  }
+  @if $type == phoneM {
+    @media (max-width: 385px) {
+      @content;
+    }
+  }
+  @if $type == phone {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }
+  @if $type == tabletS {
+    @media (max-width: 620px) {
+      @content;
+    }
+  }
+  @if $type == tabletM {
+    @media (max-width: 750px) {
+      @content;
+    }
+  }
+
+  @if $type == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  //860px
+
+  @if $type == desktop {
+    @media only screen and (max-width: 1120px) {
+      @content;
+    }
+  }
+
+  @if $type == desktopL {
+    @media only screen and (max-width: 1500px) {
+      @content;
+    }
+  }
+
+  @if $type == 4k {
+    @media only screen and (min-width: 1501px) {
+      @content;
+    }
+  }
+}

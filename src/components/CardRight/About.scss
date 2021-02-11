@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+@import "../../style//mixins";
+.col-title {
+  position: relative;
+  height: 45px;
+  text-align: center;
+  h2::first-letter {
+    color: rgb(12, 120, 124);
+  }
+
+  h2 {
+    font-family: "Libre Baskerville";
+
+    @include media(tabletM) {
+      font-size: 25px;
+      margin: 0.8rem 0;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(6, 179, 185, 0.521) 0%,
+      rgba(255, 255, 255, 0.534) 70%
+    );
+  }
+}
+
+.timeframe {
+  margin: 17px 0px 12px 0px;
+
+  span {
+    color: rgb(129, 129, 129);
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 3px 5px;
+    border: 1px solid rgba(129, 129, 129, 0.603);
+  }
+}
+
+.location-ping {
+  width: 20px;
+  height: 20px;
+  padding: 3px 2px 0px 2px;
+  stroke-width: 25;
+  stroke: rgb(67, 141, 175);
+}
+
+.col-item-title {
+  font-weight: 650;
+}
+
+.col-item-info {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 350;
+  color: rgb(116, 116, 116);
+}
+
+.coding,
+.languages {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 5%;
+
+  @include media(tabletS) {
+    flex-wrap: wrap;
+  }
+  @include media(tabletM) {
+    justify-content: center;
+  }
+
+  &-item {
+    padding: 10px;
+
+    @include media(tabletS) {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.coding {
+  &-item {
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
+  &-item:hover {
+    background-color: rgba(203, 214, 216, 0.747);
+  }
+}
+
+.strength {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  @include media(tabletM) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-title {
+    position: relative;
+    font-family: "Libre Baskerville";
+    width: 23%;
+    text-align: right;
+
+    @include media(tabletM) {
+      text-align: left;
+      align-self: flex-start;
+      margin: 1rem 0 0 1rem;
+      color: rgb(116, 116, 116);
+    }
+  }
+
+  &-title::after {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(14, 14, 14, 0.521) 0%,
+      rgba(255, 255, 255, 0.534) 90%
+    );
+
+    @include media(tabletM) {
+      display: none;
+    }
+  }
+}
+
+.languages {
+  position: relative;
+
+  &-item {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 68%;
+    color: #f3f3f3;
+    margin-right: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px 0px #fff;
+    border-radius: 70px;
+
+    @include media(tabletM) {
+      height: 2.5rem;
+    }
+  }
+
+  &-bar {
+  }
+
+  &-bar::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 70px 30px 30px 70px;
+    content: "";
+    height: 91%;
+    z-index: 1;
+    background-color: #25abb47e;
+
+    background-image: repeating-linear-gradient(
+      -50deg,
+      transparent,
+      transparent 15px,
+      rgba(255, 255, 255, 0.185) 15px,
+      rgba(255, 255, 255, 0.185) 30px
+    );
+    box-shadow: inset 0px 1px 0px 0px #edfabc, inset 0px -1px 1px #4891f0;
+    border: 1px solid #327089;
+  }
+
+  &-chinese::after {
+    width: 100%;
+    border-radius: 70px;
+  }
+
+  &-english::after {
+    width: 85%;
+  }
+
+  &-bar-font {
+    font-size: 15px;
+    padding-left: 10px;
+    z-index: 5;
+  }
+
+  &-bar-font-percent {
+    margin-right: 10px;
+    z-index: 5;
+  }
+
+  &-bar-font-percent-english {
+    margin-right: 42px;
+    z-index: 5;
+  }
+}

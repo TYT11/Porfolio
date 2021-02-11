@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Libre+Baskerville:wght@700&display=swap");
+@import "../../style//mixins";
+
+.left {
+  position: relative;
+  background-color: transparent;
+  width: 36%;
+  margin: 50px 60px;
+  z-index: 1000;
+
+  @include media(desktopL) {
+    width: 33%;
+    margin: 0;
+  }
+
+  @include media(desktop) {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -18px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 192, 192, 0.308);
+    z-index: -1;
+    border-radius: 10px;
+
+    @include media(desktopL) {
+      height: 96%;
+    }
+
+    @include media(phone) {
+      border-radius: 0;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 3px #7c7c7c21;
+  z-index: 100;
+
+  @include media(desktop) {
+    height: 180px;
+  }
+
+  @include media(phone) {
+    border-radius: 0;
+    width: 97%;
+    margin: auto;
+  }
+
+  @include media(phoneS) {
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+
+  &-pic {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-image: url("../../images/profile.png");
+    background-position: center 10%;
+    background-size: cover;
+    overflow: hidden;
+    @include media(desktopL) {
+      height: 240px;
+    }
+
+    @include media(desktop) {
+      display: none;
+    }
+  }
+
+  &-pic::before {
+    content: "";
+    position: absolute;
+    left: 20%;
+    top: 93%;
+    transform: rotate(-10deg);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &-pic::after {
+    content: "";
+    position: absolute;
+    left: -20%;
+    top: 93%;
+    transform: rotate(10deg);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &-info {
+    height: 300px;
+    @include media(desktopL) {
+      height: 230px;
+    }
+    @include media(desktop) {
+      width: 100%;
+    }
+
+    p {
+      color: #4a6b6a;
+      font-size: 18px;
+
+      @include media(desktop) {
+        margin: 0.5rem 0;
+      }
+
+      @include media(tabletM) {
+        font-size: 16px;
+        color: rgb(124, 124, 124);
+      }
+    }
+
+    h1 {
+      font-family: "Josefin Sans", sans-serif;
+
+      @include media(desktop) {
+        font-size: 34px;
+        margin: 1.8rem 0 0 0;
+      }
+
+      @include media(tabletM) {
+        font-size: 32px;
+        margin: 1.5rem 0 0 0;
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    @include media(desktopL) {
+      height: 40px;
+    }
+
+    @include media(desktop) {
+      height: 60px;
+    }
+  }
+
+  &-buttons::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(197, 202, 213, 0.7) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+}
+
+.button:not(:first-child) {
+  margin-left: 20px;
+}
+
+.button-gmail {
+  width: 25px;
+  height: 25px;
+  background-image: url("../../images/svg/gmail.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.button-github {
+  width: 25px;
+  height: 25px;
+  background-image: url("../../images/svg/github.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}

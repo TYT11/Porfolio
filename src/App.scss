@@ -1,0 +1,36 @@
+@import "./style//mixins";
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.container-open {
+  position: relative;
+  max-width: 1268px;
+  max-height: 674px;
+  top: 50%;
+  margin: auto;
+
+  @include media(desktopL) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+    max-width: 88vw;
+  }
+
+  @include media(desktop) {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+
+  @include media(tablet) {
+    max-height: 100%;
+  }
+
+  @include media(phoneM) {
+    width: 100%;
+    max-width: 100%;
+  }
+}

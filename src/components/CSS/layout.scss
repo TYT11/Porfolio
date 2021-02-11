@@ -1,0 +1,74 @@
+@import "../../style//mixins";
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+
+  @include media(tabletS) {
+    flex-direction: column;
+  }
+
+  &-left,
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .col-info {
+      align-self: stretch;
+    }
+  }
+
+  &-img {
+    overflow: hidden;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.works-col {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin: 5px auto;
+  overflow: hidden;
+
+  @include media(tabletS) {
+    width: 100%;
+  }
+}
+
+.col-1-of-1 {
+  padding: 0px 10px;
+  width: 100%;
+  margin: auto;
+  @include media(tablet) {
+    width: 98%;
+  }
+}
+
+.col-1-of-2 {
+  padding: 0px 10px;
+  width: 49%;
+
+  @include media(tablet) {
+    width: 98%;
+    line-height: 1.7rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+
+  @include media(tabletM) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
