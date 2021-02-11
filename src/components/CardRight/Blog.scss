@@ -6,6 +6,10 @@
   width: 100%;
   margin: 25px 0;
 
+  @include media(phone) {
+    margin: 40px 0;
+  }
+
   &-container {
     position: relative;
     display: flex;

@@ -48,6 +48,10 @@
     width: 80%;
     padding-top: 20px;
 
+    @include media(phone) {
+      width: 95%;
+    }
+
     &-img {
       overflow: hidden;
       width: 75%;
@@ -150,6 +154,9 @@
         width: 32px;
         background-color: rgb(112, 112, 112);
         transform: rotate(46deg);
+        @include media(phone) {
+          width: 25px;
+        }
       }
 
       &::after {
@@ -161,6 +168,9 @@
         width: 32px;
         background-color: rgb(112, 112, 112);
         transform: rotate(-46deg);
+        @include media(phone) {
+          width: 25px;
+        }
       }
 
       @include media(tablet) {
@@ -177,6 +187,10 @@
     width: 80%;
     font-size: 19px;
     line-height: 32px;
+
+    @include media(phone) {
+      width: 100%;
+    }
 
     &-content {
       margin: 0 15%;
@@ -229,6 +243,10 @@
     align-items: center;
     width: 85%;
     margin-top: 2%;
+
+    @include media(phone) {
+      width: 95%;
+    }
 
     &-info {
       display: flex;
