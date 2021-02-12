@@ -203,6 +203,18 @@
 
       ul {
         padding-left: 3rem;
+
+        @include media(phone) {
+          padding-left: 2rem;
+        }
+      }
+
+      a {
+        color: rgb(17, 97, 150);
+      }
+
+      a:visited {
+        color: rgb(116, 116, 116);
       }
 
       @include media(desktop) {

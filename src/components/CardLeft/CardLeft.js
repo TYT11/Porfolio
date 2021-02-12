@@ -1,6 +1,4 @@
 import React from "react";
-import Profile from "../../images/profile.png";
-
 import "./CardLeft.scss";
 
 const CardLeft = () => {
