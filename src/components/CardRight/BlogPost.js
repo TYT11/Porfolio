@@ -7,6 +7,7 @@ import { ReactComponent as Twitter } from "../../images/svg/twitter.svg";
 
 import ReactMarkdown from "react-markdown";
 import Code from "./Code";
+import Head from "./Head";
 
 const setScrollHidden = () => {
   if (document.body.style.overflow === "hidden") {
@@ -60,6 +61,11 @@ const BlogPost = ({ article, state }, ...props) => {
       tabIndex="0"
       ref={closeModalRef}
     >
+      <Head
+        title={article.title}
+        desc={`Personal notes on ${article.title}.`}
+      />
+
       <div className="post-container">
         <div className="post-header">
           <div className="post-header-title">{article.title}</div>

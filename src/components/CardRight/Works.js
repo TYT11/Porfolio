@@ -11,9 +11,13 @@ import Ecommerce_l from "../../images/e-commerce_cropped_large.png";
 import Ecommerce_m from "../../images/e-commerce_cropped_medium.png";
 import Ecommerce_s from "../../images/e-commerce_cropped_small.png";
 
+import Head from "./Head";
+
 const Works = () => {
   return (
     <div className="card-right" id="works">
+      <Head title="Works" desc="A collection of my personal projects." />
+
       <div className="col">
         <div className="col-left works-col">
           <div className="col-img">

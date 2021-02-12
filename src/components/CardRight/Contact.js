@@ -2,10 +2,9 @@ import React, { useState, useRef } from "react";
 import "./Contact.scss";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useHistory } from "react-router-dom";
+import Head from "./Head";
 
 const Contact = () => {
-  let history = useHistory();
   const [form, setForm] = useState({ name: "", content: "", email: "" });
   const [success, setSuccess] = useState(false);
   const recaptchaRef = useRef(null);
@@ -51,6 +50,7 @@ const Contact = () => {
 
   return (
     <div className="card-right-active card-right">
+      <Head title="Contact" desc="Contact form to send me e-mails." />
       <div className="col-title">
         <h2>Find me here!</h2>
       </div>

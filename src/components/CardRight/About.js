@@ -1,10 +1,12 @@
 import React from "react";
 import "./About.scss";
 import { ReactComponent as LocationPing } from "../../images/svg/location-pin.svg";
+import Head from "./Head";
 
 const About = () => {
   return (
     <div className="card-right" id="about">
+      <Head title="About" desc="Get to know me a little bit more." />
       <div className="row">
         <div className="col-1-of-2">
           <div className="col-title">

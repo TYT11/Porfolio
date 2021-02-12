@@ -1,10 +1,12 @@
 import React from "react";
 import "./CardRight.scss";
 import CryingBaby from "../../images/crying.gif";
+import Head from "./Head";
 
 export default function Error() {
   return (
     <div className="card-right-active card-right">
+      <Head title="Oops!" desc="Something went wrong." noRobo="true" />
       <div className="col-title">
         <h2>OOPS</h2>
       </div>

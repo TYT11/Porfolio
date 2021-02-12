@@ -3,7 +3,8 @@ import "./Blog.scss";
 import BlogPost from "./BlogPost";
 import axios from "axios";
 import { ReactComponent as LoaderSVG } from "../../images/svg/loader.svg";
-import { Link, Switch, Route, useLocation } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import Head from "./Head";
 
 const Loader = () => {
   return (
@@ -16,8 +17,6 @@ const Loader = () => {
 const Blog = () => {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
-  const loca = useLocation();
-  const imgPath = "../../src/images/posts/";
 
   useEffect(() => {
     axios.get(process.env.REACT_APP_BLOG_URL).then((data) => {
@@ -61,6 +60,10 @@ const Blog = () => {
 
   return (
     <>
+      <Head
+        title="Notes"
+        desc="All of my front-end notes for future references."
+      />
       <div className="card-right">
         <div className="col-1-of-1">
           <div className="col-title">
