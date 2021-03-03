@@ -11,22 +11,22 @@
   border-radius: 5px;
   z-index: 1100;
   font-size: 14px;
-  width: 100%;
   background-color: #fff;
+
+  @include media(4k) {
+    width: 100px;
+    left: -3rem;
+  }
 
   @include media(desktopL) {
     position: fixed;
     height: 3.7rem;
     top: 0;
     left: 0;
+    width: 100%;
     border-radius: 0px;
     background-color: #023b42;
     box-shadow: 1px 3px 7px rgba(82, 82, 82, 0.5);
-  }
-
-  @include media(4k) {
-    width: 100px;
-    left: -6%;
   }
 
   ul {

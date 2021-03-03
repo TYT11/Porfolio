@@ -33,19 +33,19 @@
   //860px
 
   @if $type == desktop {
-    @media only screen and (max-width: 1120px) {
+    @media only screen and (max-width: 1024px) {
       @content;
     }
   }
 
   @if $type == desktopL {
-    @media only screen and (max-width: 1500px) {
+    @media only screen and (max-width: 1279px) {
       @content;
     }
   }
 
   @if $type == 4k {
-    @media only screen and (min-width: 1501px) {
+    @media only screen and (min-width: 1280px) {
       @content;
     }
   }

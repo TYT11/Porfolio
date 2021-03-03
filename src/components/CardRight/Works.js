@@ -20,17 +20,20 @@ const Works = () => {
 
       <div className="col">
         <div className="col-left works-col">
-          <div className="col-img">
-            <img
-              src={Ecommerce_l}
-              alt="Screenshot of my full-stack E-Commerce website."
-              srcSet={`${Ecommerce_l} 1024w, ${Ecommerce_m} 640w, ${Ecommerce_s} 320w`}
-              sizes="(max-width: 620px) 70vw, (max-width:1024px) 40vw, 20vw"
-            />
-            <div className="col-img-file">
-              <img src={Search}></img>
+          <a href="https://marionia.herokuapp.com/" target="blank">
+            <div className="col-img">
+              <img
+                src={Ecommerce_l}
+                alt="Screenshot of my full-stack E-Commerce website."
+                srcSet={`${Ecommerce_l} 1024w, ${Ecommerce_m} 640w, ${Ecommerce_s} 320w`}
+                sizes="(max-width: 620px) 70vw, (max-width:1024px) 40vw, 20vw"
+              />
+              <div className="col-img-file">
+                <img src={Search} alt="click to learn more icon"></img>
+              </div>
             </div>
-          </div>
+          </a>
+
           <div className="col-info">
             <div className="col-title">
               <h2>Marionia</h2>
@@ -71,7 +74,7 @@ const Works = () => {
               sizes="(max-width: 620px) 70vw, (max-width:1024px) 40vw, 20vw"
             />
             <div className="col-img-file">
-              <img src={Search}></img>
+              <img src={Search} alt="click to learn more icon"></img>
             </div>
           </div>
         </div>

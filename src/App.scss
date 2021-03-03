@@ -7,10 +7,14 @@
 
 .container-open {
   position: relative;
-  max-width: 1268px;
+  max-width: 1210px;
   max-height: 674px;
   top: 50%;
   margin: auto;
+
+  @include media(4k) {
+    left: 1.5rem;
+  }
 
   @include media(desktopL) {
     display: flex;
@@ -23,6 +27,7 @@
   @include media(desktop) {
     flex-direction: column;
     margin-top: 6rem;
+    left: 0;
   }
 
   @include media(tablet) {
