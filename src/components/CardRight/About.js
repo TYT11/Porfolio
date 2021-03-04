@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.scss";
+import "../CSS/layout.scss";
 import { ReactComponent as LocationPing } from "../../images/svg/location-pin.svg";
 import Head from "./Head";
 

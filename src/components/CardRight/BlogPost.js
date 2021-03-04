@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./BlogPost.scss";
 import { useHistory, useLocation } from "react-router-dom";
 import { ReactComponent as Share } from "../../images/svg/share.svg";
 import { ReactComponent as Facebook } from "../../images/svg/facebook.svg";
 import { ReactComponent as Twitter } from "../../images/svg/twitter.svg";
-
 import ReactMarkdown from "react-markdown";
 import Code from "./Code";
 import Head from "./Head";

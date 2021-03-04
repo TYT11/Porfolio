@@ -1,5 +1,5 @@
 import React from "react";
-import "./CardRight.scss";
+import "./Contact.scss";
 import CryingBaby from "../../images/crying.gif";
 import Head from "./Head";
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Blog.scss";
+import "../CSS/layout.scss";
 import BlogPost from "./BlogPost";
 import axios from "axios";
 import { ReactComponent as LoaderSVG } from "../../images/svg/loader.svg";

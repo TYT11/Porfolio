@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import "./CardRight.css";
 import "./CardRight.scss";
-import About from "./About";
-import Works from "./Works";
-import Contact from "./Contact";
-import Blog from "./Blog";
-import Error from "./Error";
-import { Switch, Route, useLocation } from "react-router-dom";
+import "./About.scss";
+
+const About = lazy(() => import("./About"));
+const Works = lazy(() => import("./Works"));
+const Contact = lazy(() => import("./Contact"));
+const Blog = lazy(() => import("./Blog"));
+const Error = lazy(() => import("./Error"));
 
 const Card_right = () => {
   const location = useLocation();
@@ -18,13 +20,15 @@ const Card_right = () => {
     { path: "/contact", component: Contact, exact: false },
   ];
   return (
-    <Switch location={location}>
-      {routes.map(({ path, component, exact }) => {
-        return <Route path={path} component={component} exact={exact} />;
-      })}
-      /
-      <Route component={Error} />
-    </Switch>
+    <Suspense fallback={<div></div>}>
+      <Switch location={location}>
+        {routes.map(({ path, component, exact }) => {
+          return <Route path={path} component={component} exact={exact} />;
+        })}
+        /
+        <Route component={Error} />
+      </Switch>
+    </Suspense>
   );
 };
 
