@@ -1,5 +1,4 @@
 import React from "react";
-import "./About.scss";
 import "../CSS/layout.scss";
 import { ReactComponent as LocationPing } from "../../images/svg/location-pin.svg";
 import Head from "./Head";
@@ -15,10 +14,16 @@ const About = () => {
           </div>
 
           <p>
-            I'm Annie. I've been self-teaching web development for around six
-            months. I built Nostalgy, a full-stack E-commerce website that uses
-            React, Django, and PostgreSQL. Beside coding, I enjoy teaching
-            English!
+            I've been self-teaching web development for around eight months. I
+            built this site and{" "}
+            <a
+              href="https://marionia.herokuapp.com/"
+              style={{ color: "#888", fontWeight: "800" }}
+            >
+              Marionia
+            </a>
+            , a full-stack E-commerce store that brings back good old memories!
+            I'm passionate with learning both Web and English :)
           </p>
         </div>
         <div className="col-1-of-2">
@@ -43,7 +48,7 @@ const About = () => {
       <div className="row">
         <div className="col-1-of-1">
           <div className="col-title">
-            <h2>Tools</h2>
+            <h2>Tool Kit</h2>
           </div>
           <div className="strength">
             <h3 className="strength-title">Languages</h3>
@@ -55,7 +60,6 @@ const About = () => {
               </li>
               <li className="languages-item">
                 <span className="languages-bar-font">English</span>
-
                 <span className="languages-bar languages-english"></span>
                 <span className="languages-bar-font-percent-english">85%</span>
               </li>

@@ -8,7 +8,7 @@ const CardLeft = () => {
         <div className="card-pic"></div>
 
         <div className="card-info">
-          <h1>YI-TING TSAI</h1>
+          <h1>YI-TING</h1>
           <p>Front-end Developer</p>
           <p>Taipei, TW</p>
         </div>
@@ -16,9 +16,6 @@ const CardLeft = () => {
         <div className="card-buttons">
           <a className="button" href="#">
             <button className="button-github"></button>
-          </a>
-          <a className="button" href="#">
-            <button className="button-gmail"></button>
           </a>
         </div>
       </div>

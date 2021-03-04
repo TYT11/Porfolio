@@ -40,8 +40,8 @@ const Works = () => {
             </div>
 
             <p>
-              A full-stack E-commerce store with log in/out, shopping cart,
-              order management and childhood memories!
+              A full-stack store with user auth, shopping cart, order management
+              and childhood memories! Front-end and back-end are decoupled.
             </p>
             <ul className="work-items">
               <li>RWD</li>
@@ -58,7 +58,10 @@ const Works = () => {
             <div className="col-title">
               <h2>Porfolio (here!)</h2>
             </div>
-            <p>A single-page application built with react.</p>
+            <p>
+              A single-page application built with React. I used it as a css
+              practice.
+            </p>
             <ul className="work-items">
               <li>RWD</li>
               <li>SCSS</li>

@@ -19,8 +19,15 @@ const Card_right = () => {
     { path: "/blog", component: Blog, exact: false },
     { path: "/contact", component: Contact, exact: false },
   ];
+
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense
+      fallback={
+        <div className="card-right">
+          <div className="col-1-of-1"></div>
+        </div>
+      }
+    >
       <Switch location={location}>
         {routes.map(({ path, component, exact }) => {
           return <Route path={path} component={component} exact={exact} />;
