@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap);
 @import "../../style//mixins";
-
+@import "../../style//variables";
 .col-title {
   position: relative;
   height: 45px;
@@ -210,5 +210,122 @@
   &-bar-font-percent-english {
     margin-right: 42px;
     z-index: 5;
+  }
+}
+
+.course {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 1rem 1rem 1rem;
+
+  @include media(tablet) {
+    flex-wrap: wrap;
+  }
+
+  @include media(tabletM) {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  @include media(phone) {
+    flex-direction: column;
+  }
+
+  &-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 42%;
+    margin: 0.5rem;
+    padding: 0 1rem 1.5rem 1rem;
+    box-shadow: 3px 4px 5px rgba(223, 215, 215, 0.295);
+    border: solid 1px #eee;
+    transform: none;
+    transition: transform 0.5s;
+
+    @include media(tablet) {
+      flex: 0 0 42%;
+      margin: 0.5rem;
+    }
+
+    @include media(tabletM) {
+      flex: 0 0 100%;
+      margin: 0.5rem auto;
+      width: 100%;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translate(-0.5rem, -0.8rem);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      box-sizing: inherit;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 1px solid transparent;
+    }
+
+    &:hover::before {
+      top: 0;
+      left: 0;
+      animation: RightBottom 0.5s forwards;
+    }
+
+    &:hover::after {
+      bottom: 0;
+      right: 0;
+      animation: LeftTop 0.5s forwards 0.5s;
+    }
+  }
+
+  &-author {
+    color: rgb(139, 139, 139);
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes RightBottom {
+  0% {
+    width: 0%;
+    height: 0;
+    border-top-color: $border-color;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: $border-color;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: $border-color;
+    border-right-color: $border-color;
+  }
+}
+
+@keyframes LeftTop {
+  0% {
+    width: 0%;
+    border-bottom-color: $border-color;
+  }
+  50% {
+    width: 100%;
+    height: 0%;
+    border-bottom-color: $border-color;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-bottom-color: $border-color;
+    border-left-color: $border-color;
   }
 }

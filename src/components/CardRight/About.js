@@ -76,6 +76,53 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="row">
+        <div className="col-1-of-1 ">
+          <div className="col-title">
+            <h2>Courses Taken</h2>
+          </div>
+
+          <div className="course">
+            <a
+              href="https://www.udemy.com/course/advanced-css-and-sass/"
+              className="course-card"
+              target="blank"
+            >
+              <h4>Advanced CSS and Sass</h4>
+
+              <div className="course-author">by Jonas Schmedtmann</div>
+            </a>
+
+            <a
+              href="https://www.udemy.com/course/the-complete-javascript-course/"
+              className="course-card"
+              target="blank"
+            >
+              <h4>The Complete JavaScript Course</h4>
+              <div className="course-author">by Jonas Schmedtmann</div>
+            </a>
+
+            <a
+              href="https://www.udemy.com/course/understand-javascript/"
+              className="course-card"
+              target="blank"
+            >
+              {" "}
+              <h4>JavaScript: Understanding the Weird Parts</h4>
+              <div className="course-author">by Anthony Alicea </div>
+            </a>
+            <a
+              href="https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript"
+              className="course-card"
+              target="blank"
+            >
+              {" "}
+              <h4> Web Programming with Python and JavaScript</h4>
+              <div className="course-author">by David Malan, Brian Yu</div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

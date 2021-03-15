@@ -14,7 +14,7 @@ const CardLeft = () => {
         </div>
 
         <div className="card-buttons">
-          <a className="button" href="#">
+          <a className="button" href="https://github.com/TYT11">
             <button className="button-github"></button>
           </a>
         </div>
