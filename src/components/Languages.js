@@ -36,7 +36,7 @@ const lang = {
     coding: "程式",
     courses: "修習課程",
     porfolioText:
-      "前端為React，無CSS框架。使用react-helmet及react-markdown來更改head內容、處理文章樣式。",
+      "前端為React，無CSS框架。使用react-helmet及react-markdown來新增meta等標籤、處理文章樣式。",
     marioniaText:
       "前端為React、後端為Django Rest Framework搭配Simple JWT。實作CRUD、會員系統、購物車、幻燈片等，利用token來辨識使用者。並用axios instance、攔截器統一管理api、實現token過期自動重新登入。",
     contact: "聯絡我",
