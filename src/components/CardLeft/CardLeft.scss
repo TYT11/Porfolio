@@ -52,7 +52,7 @@
   z-index: 100;
 
   @include media(desktop) {
-    height: 180px;
+    height: 200px;
   }
 
   @include media(phone) {
@@ -74,6 +74,8 @@
     background-position: center 10%;
     background-size: cover;
     overflow: hidden;
+    animation: fadeMoveIn 1.5s forwards;
+
     @include media(desktopL) {
       height: 240px;
     }
@@ -106,9 +108,9 @@
   }
 
   &-info {
-    height: 300px;
+    height: 280px;
     @include media(desktopL) {
-      height: 230px;
+      height: 185px;
     }
     @include media(desktop) {
       width: 100%;
@@ -155,7 +157,7 @@
     }
 
     @include media(desktop) {
-      height: 60px;
+      height: 45px;
     }
   }
 
@@ -194,4 +196,27 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.lang-select {
+  border: none;
+  background-color: #eee;
+  padding: 0.2rem;
+  margin: 0 auto 1rem auto;
+  option {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeMoveIn {
+  0% {
+    opacity: 0.2;
+    top: -150px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }

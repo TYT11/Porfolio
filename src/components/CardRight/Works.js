@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../CSS/layout.scss";
 import "./Works.scss";
 import Search from "../../images/svg/search.svg";
@@ -12,8 +12,10 @@ import Ecommerce_m from "../../images/e-commerce_cropped_medium.png";
 import Ecommerce_s from "../../images/e-commerce_cropped_small.png";
 
 import Head from "./Head";
+import { LanguageContext } from "../../App";
 
 const Works = () => {
+  const lang = useContext(LanguageContext);
   return (
     <div className="card-right" id="works">
       <Head title="Works" desc="A collection of my personal projects." />
@@ -39,10 +41,7 @@ const Works = () => {
               <h2>Marionia</h2>
             </div>
 
-            <p>
-              A full-stack store with user auth, shopping cart, order management
-              and childhood memories! Front-end and back-end are decoupled.
-            </p>
+            <p>{lang.marioniaText}</p>
             <ul className="work-items">
               <li>RWD</li>
               <li>SCSS</li>
@@ -58,10 +57,7 @@ const Works = () => {
             <div className="col-title">
               <h2>Porfolio (here!)</h2>
             </div>
-            <p>
-              A single-page application built with React. I used it as a css
-              practice.
-            </p>
+            <p>{lang.porfolioText}</p>
             <ul className="work-items">
               <li>RWD</li>
               <li>SCSS</li>
