@@ -3,8 +3,11 @@ import "./Contact.scss";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import Head from "./Head";
+import { LanguageContext } from "../../App";
+import { useContext } from "react";
 
 const Contact = () => {
+  const lang = useContext(LanguageContext);
   const [form, setForm] = useState({ name: "", content: "", email: "" });
   const [success, setSuccess] = useState(false);
   const recaptchaRef = useRef(null);
@@ -30,7 +33,6 @@ const Contact = () => {
       },
     };
     if (recaptchaValue) {
-      console.log(recaptchaValue);
       axios
         .post("https://api.emailjs.com/api/v1.0/email/send", data, {
           headers: { "Content-Type": "application/json" },
@@ -44,7 +46,7 @@ const Contact = () => {
         })
         .catch((res) => console.log(res));
     } else {
-      alert("Please check the reCAPTCHA");
+      alert("Please check the reCAPTCHA.");
     }
   };
 
@@ -52,7 +54,7 @@ const Contact = () => {
     <div className="card-right-active card-right">
       <Head title="Contact" desc="Contact form to send me e-mails." />
       <div className="col-title">
-        <h2>Find me here!</h2>
+        <h2>{lang.contact}</h2>
       </div>
       <div className={`${success ? "alert-success" : ""} alert `}>
         {success ? "Message sent successfully ❤️" : ""}
@@ -61,7 +63,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-container-form">
           <form action="#" className="contactForm" onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{lang.name}</label>
             <input
               type="text"
               id="name"
@@ -69,7 +71,7 @@ const Contact = () => {
               value={form.name}
               required
             />
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email">{lang.email}</label>
             <input
               type="text"
               id="email"
@@ -78,7 +80,7 @@ const Contact = () => {
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             />
-            <label htmlFor="content">Content</label>
+            <label htmlFor="content">{lang.content}</label>
             <textarea
               id="content"
               onChange={handleChange}

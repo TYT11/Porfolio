@@ -52,7 +52,7 @@
   z-index: 100;
 
   @include media(desktop) {
-    height: 180px;
+    height: 225px;
   }
 
   @include media(phone) {
@@ -106,9 +106,9 @@
   }
 
   &-info {
-    height: 300px;
+    height: 280px;
     @include media(desktopL) {
-      height: 230px;
+      height: 185px;
     }
     @include media(desktop) {
       width: 100%;
@@ -155,7 +155,7 @@
     }
 
     @include media(desktop) {
-      height: 60px;
+      height: 45px;
     }
   }
 
@@ -194,4 +194,14 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
+}
+
+.lang-select {
+  border: none;
+  background-color: #eee;
+  padding: 0.2rem;
+  margin: 0 auto 1rem auto;
+  option {
+    font-size: 1rem;
+  }
 }

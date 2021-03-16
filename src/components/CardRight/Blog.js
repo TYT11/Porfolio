@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Blog.scss";
 import "../CSS/layout.scss";
 import BlogPost from "./BlogPost";
@@ -6,6 +6,7 @@ import axios from "axios";
 import { ReactComponent as LoaderSVG } from "../../images/svg/loader.svg";
 import { Link, Route } from "react-router-dom";
 import Head from "./Head";
+import { LanguageContext } from "../../App";
 
 const Loader = () => {
   return (
@@ -18,6 +19,7 @@ const Loader = () => {
 const Blog = () => {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
+  const lang = useContext(LanguageContext);
 
   useEffect(() => {
     axios.get(process.env.REACT_APP_BLOG_URL).then((data) => {
@@ -68,7 +70,7 @@ const Blog = () => {
       <div className="card-right">
         <div className="col-1-of-1">
           <div className="col-title">
-            <h2>Notes</h2>
+            <h2>{lang.notes}</h2>
           </div>
           {loading ? <Loader /> : <BlogRender datas={datas} />}
         </div>
