@@ -29,8 +29,15 @@ const Card_right = () => {
       }
     >
       <Switch location={location}>
-        {routes.map(({ path, component, exact }) => {
-          return <Route path={path} component={component} exact={exact} />;
+        {routes.map(({ path, component, exact }, index) => {
+          return (
+            <Route
+              path={path}
+              component={component}
+              exact={exact}
+              key={index}
+            />
+          );
         })}
         /
         <Route component={Error} />

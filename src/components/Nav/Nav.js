@@ -14,7 +14,7 @@ const Nav = () => {
         id="Nav-toggle-hidden"
         className="Nav-toggle-hidden"
       />
-      <label className="Nav-toggle" for="Nav-toggle-hidden">
+      <label className="Nav-toggle" htmlFor="Nav-toggle-hidden">
         <div className="Nav-toggle-line"></div>
       </label>
 

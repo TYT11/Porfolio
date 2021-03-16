@@ -22,10 +22,19 @@ const Blog = () => {
   const lang = useContext(LanguageContext);
 
   useEffect(() => {
-    axios.get(process.env.REACT_APP_BLOG_URL).then((data) => {
-      setDatas(data.data);
-      setLoading(false);
-    });
+    let source = axios.CancelToken.source();
+    axios
+      .get(process.env.REACT_APP_BLOG_URL, {
+        cancelToken: source.token,
+      })
+      .then((data) => {
+        setDatas(data.data);
+        setLoading(false);
+      });
+
+    return function () {
+      source.cancel();
+    };
   }, []);
 
   const BlogRender = ({ datas }) => {
