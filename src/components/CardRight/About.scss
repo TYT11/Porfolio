@@ -142,6 +142,29 @@
   }
 }
 
+.workExp {
+  flex-direction: column;
+  &-items {
+    display: flex;
+    flex-direction: column;
+  }
+  &-title {
+    margin-bottom: 0.9rem;
+    font-weight: bold;
+  }
+  &-company {
+    font-weight: bold;
+    color: #666;
+  }
+  &-period {
+    font-size: 15px;
+    color: rgb(129, 129, 129);
+  }
+  &-desc {
+    margin-top: 1.5rem;
+  }
+}
+
 .languages {
   position: relative;
 

@@ -72,7 +72,7 @@ const Blog = () => {
           <div className="col-title">
             <h2>{lang.notes}</h2>
           </div>
-          {loading ? <Loader /> : <BlogRender datas={datas} />}
+          {loading ? <Loader /> : <Loader />}
         </div>
       </div>
 

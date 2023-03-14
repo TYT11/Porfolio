@@ -2,10 +2,15 @@ const lang = {
   en_us: {
     intro: "Hey There!",
     introText:
-      "I've been self-teaching web development for around eight months. I built this site and Marionia, a full-stack E-commerce store that brings back good old memories! I'm passionate with learning both Web and English :)",
+      "I'm Annie. I learned all about front-end development via online resources. To strive for a better life and deeper knowledge, I quit my job to pursue a master in computer science. I embrace all challenges and possibilities. I'm also proficient in English.",
     edu: "Education",
     eduSchool: "National Taiwan University of Science and Technology",
     eduSchoolDeg: "Bachelor's Degree in Business Administration",
+    workExp: "Work Experience",
+    workTitle: "Front-end Developer",
+    workCompany: "STARLUX Airlines",
+    workDesc:
+      "In charge of the development and maintenance of internal systems. Adopted Vue to implement functions such as authority system, timeline grantt chart, real-time notification and multilanguage switches.",
     toolTitle: "Tool Kit",
     languages: "Languages",
     chinese: "Chinese",
@@ -20,15 +25,20 @@ const lang = {
     email: "E-mail",
     name: "Name",
     content: "Content",
-    notes: "Notes",
+    notes: "Notes (no notes yet)",
   },
   zh_tw: {
     intro: "關於",
     introText:
-      "我是依婷，前端自學約八個月，學習期間做了全端電商 Marionia 以及本個人網站。大學從事過英文家教、補教英文老師、文書翻譯等，雖然非本科出身，但英文的助攻讓我在學習時能接觸相當多的資源。目前透過Udemy、edX等網站努力點技能當中 :)",
+      "我是蔡依婷，透過線上資源，自學轉職網頁前端。為了精進自己，離職考取資工研究所。英文能力良好，大學即考取多益 955 分。熱愛嘗試各種挑戰。",
     edu: "學歷",
     eduSchool: "國立臺灣科技大學",
     eduSchoolDeg: "　企業管理系",
+    workExp: "工作經歷",
+    workTitle: "網頁前端工程師",
+    workCompany: "星宇航空股份有限公司",
+    workDesc:
+      "使用框架為 Vue，負責內部系統開發、維護。處理過權限系統、時間軸圖表、即時推播、多國語系等功能實作。",
     toolTitle: "工具箱",
     languages: "語言",
     chinese: "中文",
@@ -43,7 +53,7 @@ const lang = {
     email: "電子信箱",
     name: "姓名",
     content: "內容",
-    notes: "筆記",
+    notes: "筆記（撰寫中）",
   },
 };
 

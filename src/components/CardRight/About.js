@@ -34,20 +34,48 @@ const About = () => {
             <div className="col-item-info">{lang.eduSchoolDeg} </div>
           </div>
         </div>
+      </div>{" "}
+      <div className="row mt-1">
+        <div className="col-1-of-1">
+          <div className="col-title">
+            <h2>{lang.workExp}</h2>
+          </div>
+          <div className="strength workExp timeframe">
+            <div className="col-1-of-1">
+              <ul className="workExp-items">
+                <li className="workExp-title">{lang.workTitle}</li>
+                <li className="workExp-company">{lang.workCompany}</li>
+                <li className="workExp-period">2021-2022</li>
+              </ul>
+              <div>
+                <div className="workExp-desc">{lang.workDesc}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="row">
+      <div className="row mt-1">
         <div className="col-1-of-1">
           <div className="col-title">
             <h2>{lang.toolTitle}</h2>
           </div>
+          <div className="strength mt-1">
+            <h3 className="strength-title">{lang.coding}</h3>
+            <ul className="coding strength-items">
+              <li className="coding-item">Javascript</li>
+              <li className="coding-item">React</li>
+              <li className="coding-item">Vue</li>
+              <li className="coding-item">CSS(SCSS)</li>
+            </ul>
+          </div>
           <div className="strength">
             <h3 className="strength-title">{lang.languages}</h3>
             <ul className="languages strength-items">
-              <li className="languages-item">
+              {/* <li className="languages-item">
                 <span className="languages-bar-font">{lang.chinese}</span>
                 <span className="languages-bar languages-chinese"></span>
                 <span className="languages-bar-font-percent">100%</span>
-              </li>
+              </li> */}
               <li className="languages-item">
                 <span className="languages-bar-font">{lang.english}</span>
                 <span className="languages-bar languages-english"></span>
@@ -55,18 +83,9 @@ const About = () => {
               </li>
             </ul>
           </div>
-          <div className="strength">
-            <h3 className="strength-title">{lang.coding}</h3>
-            <ul className="coding strength-items">
-              <li className="coding-item">HTML</li>
-              <li className="coding-item">CSS(SCSS)</li>
-              <li className="coding-item">Javascript</li>
-              <li className="coding-item">React</li>
-            </ul>
-          </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-1">
         <div className="col-1-of-1 ">
           <div className="col-title">
             <h2>{lang.courses}</h2>

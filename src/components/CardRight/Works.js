@@ -22,7 +22,7 @@ const Works = () => {
 
       <div className="col">
         <div className="col-left works-col">
-          <a href="https://marionia.herokuapp.com/" target="blank">
+          <a href="https://github.com/TYT11/Marionia" target="blank">
             <div className="col-img">
               <img
                 src={Ecommerce_l}
