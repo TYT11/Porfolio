@@ -2,7 +2,7 @@ const lang = {
   en_us: {
     intro: "Hey There!",
     introText:
-      "I'm Annie. I learned all about front-end development via online resources. To strive for a better life and deeper knowledge, I quit my job to pursue a master in computer science. I embrace all challenges and possibilities. I'm also proficient in English.",
+      "I'm Annie. I learned all about front-end development via online resources. To strive for a better life and deeper knowledge, I quit my job to pursue a master's in computer science. I embrace all challenges and possibilities. I'm also proficient in English.",
     edu: "Education",
     eduSchool: "National Taiwan University of Science and Technology",
     eduSchoolDeg: "Bachelor's Degree in Business Administration",
