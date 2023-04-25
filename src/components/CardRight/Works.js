@@ -22,7 +22,7 @@ const Works = () => {
 
       <div className="col">
         <div className="col-left works-col">
-          <a href="https://github.com/TYT11/Marionia" target="blank">
+          <a href="https://marionia.herokuapp.com/" target="blank">
             <div className="col-img">
               <img
                 src={Ecommerce_l}
@@ -44,10 +44,8 @@ const Works = () => {
             <p>{lang.marioniaText}</p>
             <ul className="work-items">
               <li>RWD</li>
-              <li>SCSS</li>
               <li>REACT</li>
-              <li>CRUD</li>
-              <li>DRF</li>
+              <li>DJANGO</li>
             </ul>
           </div>
         </div>
@@ -60,7 +58,6 @@ const Works = () => {
             <p>{lang.porfolioText}</p>
             <ul className="work-items">
               <li>RWD</li>
-              <li>SCSS</li>
               <li>REACT</li>
             </ul>
           </div>
