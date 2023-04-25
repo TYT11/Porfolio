@@ -3,7 +3,7 @@
 
 ![](https://i.imgur.com/CfGqMJQ.png)
 
-網址：https://yitingtsai.herokuapp.com/
+網址：https://tyt.herokuapp.com/
 
 #### Setup
 ------------
